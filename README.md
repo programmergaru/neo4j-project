@@ -33,6 +33,70 @@ Documents → OpenAI Embeddings → Neo4j Graph Database
 - ✅ **Knowledge Graph** - Visualize document connections in Neo4j Browser
 - ✅ **Multiple Embedding Providers** - Support for OpenAI and local models (Sentence Transformers)
 
+## 📺 Demo Output
+
+Here's what you'll see when running the POC:
+
+```
+================================================================================
+Neo4j Embeddings POC - Demo
+================================================================================
+
+🔍 Query: 'neural networks and deep learning'
+--------------------------------------------------------------------------------
+1. Deep Learning Fundamentals
+   Similarity: 0.811
+   Category: AI
+   Preview: Deep learning uses artificial neural networks with multiple layers...
+
+2. Introduction to Machine Learning
+   Similarity: 0.720
+   Category: AI
+
+3. Transfer Learning in Practice
+   Similarity: 0.709
+   Category: AI
+
+🔍 Query: 'language models and text processing'
+--------------------------------------------------------------------------------
+1. Natural Language Processing Basics
+   Similarity: 0.741
+   Category: NLP
+
+2. Transfer Learning in Practice
+   Similarity: 0.670
+   Category: AI
+
+🔍 Query: 'machine learning algorithms' (with Graph Context)
+--------------------------------------------------------------------------------
+1. Introduction to Machine Learning (Score: 0.841)
+   Related documents:
+   - Transfer Learning in Practice (Relevance: 0.734)
+   - Data Preprocessing Techniques (Relevance: 0.736)
+   - Reinforcement Learning Overview (Relevance: 0.737)
+
+🔍 Hybrid Search: 'artificial intelligence' + keywords: ['neural', 'learning']
+--------------------------------------------------------------------------------
+1. Introduction to Machine Learning
+   Combined Score: 0.722
+   Category: AI
+
+2. Deep Learning Fundamentals
+   Combined Score: 0.652
+   Category: AI
+
+Database Statistics:
+- Documents: 8
+- Similarity Relationships: 20
+- Chunks: 0
+```
+
+The demo showcases:
+- ✅ **Vector similarity search** - Finding semantically similar documents
+- ✅ **Graph context retrieval** - Related documents through SIMILAR_TO relationships
+- ✅ **Hybrid search** - Combining vector similarity with keyword matching
+- ✅ **Knowledge graph statistics** - 8 documents with 20 relationship connections
+
 ## 🚀 Quick Start
 
 ### Prerequisites
